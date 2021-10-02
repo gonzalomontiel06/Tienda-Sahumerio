@@ -1,0 +1,24 @@
+.navBar{
+    display: flex;
+    justify-content: center;
+
+
+    &__list{
+        display: flex;
+        align-items: center;
+        width: 60rem;
+
+        & li{
+            padding: 10px;
+        }
+    }
+
+    &__cart{
+        display: flex;
+        align-items: center;
+
+        & p {
+            margin-right: 30px;
+        }
+    }
+}
