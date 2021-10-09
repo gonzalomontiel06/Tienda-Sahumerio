@@ -1,3 +1,15 @@
-*{
-    text-align: center;
+.main{
+    
+    &--subtitle{
+        text-align: center;
+        font-family: 'Quicksand', sans-serif;
+    }
+    
+    &__section{
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        margin-top: 40px;
+        font-family: 'Quicksand', sans-serif;
+    }
 }
