@@ -1,0 +1,40 @@
+
+
+li{
+    margin-top: 5px;
+
+    & a {
+    text-decoration: none;
+    font-family: 'Quicksand', sans-serif;
+    color: black;
+
+        &:hover{
+            font-weight: bold;
+            color: #0dcaf0;
+        }
+    }
+}
+
+.categories{
+    margin: 60px;
+
+
+    &__list{
+        text-align: start;
+        padding: 0;
+    }
+
+    &--subtitulo{
+        text-transform: uppercase;
+        font-family: 'Bebas Neue', cursive;
+        border-left: solid 5px #0dcaf0;
+        padding-left: 10px;
+        line-height: 1;
+        letter-spacing: 0.5px;
+    }
+}
+
+.categorieSelected{
+    color: #0dcaf0;
+    font-weight: bold;
+}

@@ -1,3 +1,8 @@
+*{
+    list-style: none;
+    text-decoration: none;
+}
+
 .navBar{
     display: flex;
     justify-content: center;
@@ -10,8 +15,15 @@
         font-family: 'Quicksand', sans-serif;
         font-size: 1.1em;
 
-        & li{
-            padding: 10px;
+        & a{
+            text-decoration: none;
+            margin: 10px;
+            color: black;
+
+            &:hover{
+                font-weight: bold;
+                color: #0dcaf0;
+            }
         }
     }
 
@@ -30,4 +42,8 @@
             margin-bottom: 20px;
         }
     }
+}
+
+.linkSelected{
+    border-bottom: solid 1px #0dcaf0;;
 }

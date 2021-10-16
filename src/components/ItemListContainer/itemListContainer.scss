@@ -1,5 +1,7 @@
 .main{
     
+    text-align: center;
+
     &--subtitle{
         text-align: center;
         font-family: 'Quicksand', sans-serif;
@@ -10,7 +12,7 @@
         display: flex;
         justify-content: center;
         text-align: center;
-        margin-top: 40px;
         font-family: 'Quicksand', sans-serif;
     }
+
 }

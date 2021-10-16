@@ -1,5 +1,5 @@
 import React from 'react'
-import { Card } from 'react-bootstrap'
+import { Card, Button } from 'react-bootstrap'
 
 export const Item = ({item}) => {
 
@@ -10,6 +10,7 @@ export const Item = ({item}) => {
             <Card.Body>
                 <Card.Title>{item.name}</Card.Title>
                 <Card.Text>{item.price}</Card.Text>
+                <Button style={{fontWeight: 'bold'}}variant="outline-info">comprar</Button>
             </Card.Body>
         </Card>
     )
