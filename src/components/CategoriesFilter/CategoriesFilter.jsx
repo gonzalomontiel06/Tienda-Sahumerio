@@ -1,4 +1,3 @@
-import React from 'react'
 import { NavLink } from 'react-router-dom'
 import './categoriesFilter.scss'
 
@@ -15,6 +14,7 @@ export const CategoriesFilter = () => {
                 <li><NavLink activeClassName={'categorieSelected'} exact to='/categories/esencias'>Esencias</NavLink></li>
                 <li><NavLink activeClassName={'categorieSelected'} exact to='/categories/velas'>Velas</NavLink></li>
                 <li><NavLink activeClassName={'categorieSelected'} exact to='/categories/lamparas'>Lamparas de sal</NavLink></li>
+                <li><NavLink activeClassName={'categorieSelected'} exact to='/categories/figuras'>Figuras</NavLink></li>
             </ul>
         
         </div>

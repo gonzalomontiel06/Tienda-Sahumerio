@@ -1,0 +1,52 @@
+.itemDetail{
+    display: flex;
+    justify-content: center;
+
+    &__img{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    &__box{
+        width: 350px;
+        margin-left: 50px;
+
+        &__price{
+            width: 100px;
+            background-color: #0dcaf0;
+            color: white;
+            font-family: "Bebas Neue", cursive;
+            border-radius: 20px;
+            text-align: center;
+            line-height: 0.3;
+            padding: 10px;
+            font-size: 1.5em;
+        }
+
+        &__name{
+            font-family: 'Raleway', sans-serif;
+            text-transform: uppercase;
+            font-size: 3em;
+            color: #0dcaf0;
+        }
+
+        &__description{
+            font-family: 'Quicksand', sans-serif;
+            font-weight: 800;
+            letter-spacing: 1px;
+            line-height: 2;
+        }
+
+        &__button{
+            font-family: 'Quicksand', sans-serif;
+            border-radius: 20px;
+            font-size: 15px;
+            padding: 10px;
+            text-transform: uppercase;
+            font-weight: 800;
+            color: white;
+            margin-left: 5px;
+        }
+    }
+}

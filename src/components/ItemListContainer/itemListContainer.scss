@@ -1,5 +1,4 @@
 .main{
-    
     text-align: center;
 
     &--subtitle{
@@ -11,8 +10,13 @@
     &__section{
         display: flex;
         justify-content: center;
+        flex-wrap: wrap;
         text-align: center;
         font-family: 'Quicksand', sans-serif;
     }
+}
 
+.cardFlex{
+    display: flex;
+    justify-content: center;
 }

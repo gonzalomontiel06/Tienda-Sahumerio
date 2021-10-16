@@ -46,8 +46,14 @@ export const ItemListContainer = () => {
                     loading ? <Spinner animation="grow" />  
                             : <div className="container">
                                     <div className='row'>
-                                        <div className='col-lg-2'><CategoriesFilter /></div>
-                                        <div className='main__section col-lg-10'><ItemList items={items} /></div>
+                                        
+                                        <div className='col-lg-2'>
+                                            <CategoriesFilter />
+                                        </div>
+                                        
+                                        <div className='main__section col-lg-10'>
+                                            <ItemList items={items} />
+                                        </div>
                                     </div>
                                 </div>
                     }

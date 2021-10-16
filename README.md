@@ -1,3 +1,12 @@
+# TIENDA ONLINE "LOCO DEL SAHUMERIO"
+
+## PROYECTO DE VENTA DE INSUMOS PARA EL HOGAR 
+
+Se utiliza ReactJS junto con JS y SCSS para el desarrollo de la misma. 
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

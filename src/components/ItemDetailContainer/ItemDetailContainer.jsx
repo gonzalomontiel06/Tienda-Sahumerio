@@ -12,8 +12,6 @@ export const ItemDetailContainer = () => {
 
     const {itemId} = useParams()
 
-    console.log(itemId);
-
     useEffect(() => {
         pedirStock()
         .then((res) => {
@@ -27,8 +25,10 @@ export const ItemDetailContainer = () => {
     return (
         <div>
             {
-                loading ? <Spinner animation="grow" />
-                        : <ItemDetail item={item}/>
+                loading ? <div style={{textAlign: 'center'}}>
+                                <Spinner animation="grow" />
+                            </div>
+                        : <ItemDetail {...item}/>
             } 
         </div>
     )
