@@ -38,15 +38,19 @@
             line-height: 2;
         }
 
-        &__button{
-            font-family: 'Quicksand', sans-serif;
-            border-radius: 20px;
-            font-size: 15px;
-            padding: 10px;
-            text-transform: uppercase;
-            font-weight: 800;
-            color: white;
-            margin-left: 5px;
+        &__buttons{
+            display: flex;
+        
+            &__comprar{
+                font-family: 'Quicksand', sans-serif;
+                border-radius: 20px;
+                font-size: 15px;
+                padding: 10px;
+                text-transform: uppercase;
+                font-weight: 800;
+                color: white;
+                margin-left: 5px;
+            }
         }
     }
 }

@@ -16,7 +16,8 @@ export const stock = [
         price: '$1500',
         description: "El principal beneficio de las lámparas de sal del Himalaya es su capacidad para ionizar el aire. Estas piedras emiten iones negativos que aportan equilibrio al entorno al pegarse a los positivos que emiten los dispositivos electrónicos, es decir, son capaces de absorbes el exceso de ondas electromagnéticas.",
         category: 'lamparas',
-        img: sal
+        img: sal,
+        stock: 10
     },
 
     {
@@ -25,7 +26,8 @@ export const stock = [
         price: '$200',
         description: "Por lo general, los sahumerios se presentan como varillas delgadas que se colocan en unos dispositivos conocidos como porta-sahumerios. Para que desprendan su fragancia, hay que prender fuego su extremo y, de este modo, el sahumerio comienza a quemarse y a perfumar el ambiente.",
         category: 'sahumerios',
-        img: guardaSahumerio
+        img: guardaSahumerio,
+        stock: 10
     },
 
     {
@@ -34,7 +36,8 @@ export const stock = [
         price: '$300',
         description: "Las velas de noche se utilizan generalmente en los hornitos para dar calor a las esencias o derretir los Bombones Aromáticos y poder brindar un riquísimo aroma al ambiente. También son utilizadas en altares o para ofrendas si así lo desean.",
         category: 'velas',
-        img: velas
+        img: velas,
+        stock: 10
     },
 
     {
@@ -43,7 +46,8 @@ export const stock = [
         price: '$300',
         description: "Este hornillo aromático utiliza una candelita en la parte inferior y aceite aromático que se coloca en el plato superior. Una vez que el aceite se calienta con la llama de la pequeña vela, la esencia se dispersa en toda la habitación.",
         category: 'esencias',
-        img: hornito
+        img: hornito,
+        stock: 10
     },
 
     {
@@ -52,7 +56,8 @@ export const stock = [
         price: '$350',
         description: "Las esencias son el resultado de un líquido que concentra el aroma de los vegetales de los que proceden, y que al calentarlo se evapora. Pueden usarse para diferentes fines: para conseguir un efecto de relajación, para dar masajes, para perfumar nuestra casa, para fines cosméticos",
         category: 'esencias',
-        img: esencias
+        img: esencias,
+        stock: 10
     },
 
     {
@@ -61,7 +66,8 @@ export const stock = [
         price: '$150',
         description: "Los sahumerios hacen referencia al proceso y resultado de sahumar, por lo general a partir de inciensos, para perfumar el ambiente o proceder a su purificación. Los inciensos son velas que se obtienen de resinas aromáticas vegetales.",
         category: 'sahumerios',
-        img: nagChampa
+        img: nagChampa,
+        stock: 10
     },
 
     {
@@ -70,7 +76,8 @@ export const stock = [
         price: '$150',
         description: "Los sahumerios hacen referencia al proceso y resultado de sahumar, por lo general a partir de inciensos, para perfumar el ambiente o proceder a su purificación. Los inciensos son velas que se obtienen de resinas aromáticas vegetales.",
         category: 'sahumerios',
-        img: superHit
+        img: superHit,
+        stock: 10
     },
 
     {
@@ -79,7 +86,8 @@ export const stock = [
         price: '$300',
         description: "Figura Bura Sidartha",
         category: 'figuras',
-        img: buda
+        img: buda,
+        stock: 10
     },
 
     {
@@ -88,6 +96,7 @@ export const stock = [
         price: '$1700',
         description: "El principal beneficio de las lámparas de sal del Himalaya es su capacidad para ionizar el aire. Estas piedras emiten iones negativos que aportan equilibrio al entorno al pegarse a los positivos que emiten los dispositivos electrónicos, es decir, son capaces de absorbes el exceso de ondas electromagnéticas.",
         category: 'lamparas',
-        img: sal2
+        img: sal2,
+        stock: 10
     }
 ]
