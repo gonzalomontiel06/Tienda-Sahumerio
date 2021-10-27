@@ -18,7 +18,9 @@ export const NavBar = () => {
                     </section>
                     <div className="navBar__cart">
                         <p>login</p>
-                        <CartWidget />
+                        <NavLink exact to='/cartview'>
+                            <CartWidget />
+                        </NavLink>
                     </div>
                 </nav>
             </header>

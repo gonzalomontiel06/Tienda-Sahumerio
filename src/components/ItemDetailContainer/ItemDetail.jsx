@@ -1,25 +1,33 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import { useHistory } from 'react-router'
 import './itemDetail.scss'
 import { ItemCount } from '../ItemCount/ItemCount'
+import { CartContext } from '../../context/CartContext'
+import { NavLink } from 'react-router-dom'
 
 export const ItemDetail = ({name, price, description, img, id, category, stock}) => {
-    
+
+    const {addToCart, isInCart} = useContext(CartContext)
+
     const {goBack} = useHistory()
 
     const [cantidad, setCantidad] = useState(0)
 
-    const addToCart = () => {
+    const handleAgregar = () => {
         const newItem = {
             name,
             id,
             category,
             price,
-            cantidad
+            cantidad,
+            img
         }
 
-        console.log(newItem);
+        if (cantidad > 0){
+            addToCart(newItem)
     }
+}
+
 
     
     return (
@@ -31,11 +39,19 @@ export const ItemDetail = ({name, price, description, img, id, category, stock})
                 <h2 className='itemDetail__box__price'>{price}</h2>
                 <h2 className='itemDetail__box__name'>{name}</h2>
                 <p className='itemDetail__box__description'>{description}</p>
-                <div className='itemDetail__box__buttons'>
-                    <ItemCount cantidad={cantidad} setCantidad={setCantidad} stock={stock}/>
-                    <button className='itemDetail__box__buttons__comprar btn btn-info' onClick={addToCart}>comprar</button>
-                    <button className='itemDetail__box__buttons__comprar btn btn-info' onClick={() => goBack()}>volver</button>
-                </div>
+                {isInCart(id)
+                ?
+                    <>
+                        <NavLink className='itemDetail__box__buttons__comprar btn btn-info' exact to='/cartview'>terminar compra</NavLink>
+                        <button className='itemDetail__box__buttons__comprar btn btn-info' onClick={() => goBack()}>volver</button>
+                    </>
+                : 
+                    <div className='itemDetail__box__buttons'>          
+                        <ItemCount cantidad={cantidad} setCantidad={setCantidad} stock={stock}/>
+                        <button className='itemDetail__box__buttons__comprar btn btn-info' onClick={handleAgregar}>comprar</button>
+                        <button className='itemDetail__box__buttons__comprar btn btn-info' onClick={() => goBack()}>volver</button>
+                    </div>
+                }
             </div>
         </div>
     )

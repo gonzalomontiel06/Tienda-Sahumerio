@@ -15,9 +15,6 @@ export const ItemCount = ({cantidad, setCantidad, stock}) => {
         }
     }
 
-    console.log(cantidad);
-
-
     return (
         <div className='handleBox'>
             <button className='handleBox__button' onClick={handleRestar}>-</button>

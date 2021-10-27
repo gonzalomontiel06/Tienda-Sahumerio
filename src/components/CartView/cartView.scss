@@ -1,0 +1,19 @@
+.table{
+    display: flex;
+    justify-content: center;
+
+    &__Cart{
+        width: 65rem;
+        border: none;
+        
+        &__header{
+            background-color: #f7f7f7;
+            
+            & tr th {
+                height: 55px;
+                text-transform: uppercase;
+                font-family: "Quicksand", sans-serif;
+            }
+        }
+    }
+}
