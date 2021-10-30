@@ -14,7 +14,7 @@
 
         &__price{
             width: 100px;
-            background-color: #0dcaf0;
+            background-color: #cdb4db;
             color: white;
             font-family: "Bebas Neue", cursive;
             border-radius: 20px;
@@ -28,7 +28,7 @@
             font-family: 'Raleway', sans-serif;
             text-transform: uppercase;
             font-size: 3em;
-            color: #0dcaf0;
+            color: #cdb4db;
         }
 
         &__description{
@@ -48,8 +48,16 @@
                 padding: 10px;
                 text-transform: uppercase;
                 font-weight: 800;
-                color: white;
+                color: #cdb4db;
                 margin-left: 5px;
+                background-color: transparent;
+                border: solid 2px #cdb4db;
+                text-decoration: none;
+
+                &:hover{
+                    background-color: #cdb4db;
+                    color: white;
+                }
             }
         }
     }

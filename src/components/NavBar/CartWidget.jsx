@@ -1,6 +1,7 @@
 import React, { useContext } from 'react'
 import { RiShoppingCartLine } from 'react-icons/ri'
 import { CartContext } from '../../context/CartContext'
+import './navBar.scss'
 
 export const CartWidget = () => {
     
@@ -8,8 +9,8 @@ export const CartWidget = () => {
     
     return (
         <div>
-            <RiShoppingCartLine />
-            <span>{calcularItemCart()}</span>
+            <RiShoppingCartLine className='cartWidget' />
+            <span className='cartWidget__count'>{calcularItemCart()}</span>
         </div>
     )
 }

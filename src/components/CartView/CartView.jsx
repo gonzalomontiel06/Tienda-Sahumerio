@@ -1,35 +1,43 @@
 import React, { useContext } from 'react'
 import { CartContext } from '../../context/CartContext'
 import './cartView.scss'
+import { GiCancel } from "react-icons/gi";
 
 export const CartView = () => {
 
     const {carrito, removeItem, clearCart} = useContext(CartContext)
 
+
     return (
         <div>
             <div className='container table'>
-                <table className='table__Cart'>
-                    <thead className='table__Cart__header'>
+                <table className='table__cart'>
+                    <thead className='table__cart__header'>
                         <tr>
                             <th>&nbsp;</th>
                             <th>&nbsp;</th>
-                            <th>producto</th>
+                            <th id='producto'>producto</th>
                             <th>precio</th>
                             <th>cantidad</th>
                             <th>subtotal</th>
                         </tr>
                     </thead>
 
-                    <tbody>
+                    <tbody className='table__cart__body'>
                             {carrito.map((prod) => 
                                 <tr key={prod.id}>
-                                    <td><button className='btn btn-danger' onClick={() => removeItem(prod.id)}> X </button></td>
+                                    <td>
+                                        <div className='cancelItem'>
+                                            <GiCancel className='cancelItem__icon' onClick={() => removeItem(prod.id)}/>
+                                        </div>
+                                    </td>
                                     <td><img src={prod.img} alt={prod.name} width='60px'/></td>
-                                    <td>{prod.name}</td>
-                                    <td>{prod.price}</td>
-                                    <td>{prod.cantidad}</td>
-                                    <td>{prod.price * prod.cantidad}</td>
+                                    <td id='name'>{prod.name}</td>
+                                    <td>${prod.price}</td>
+                                    <td>
+                                        <span>{prod.cantidad}</span>
+                                    </td>
+                                    <td>${prod.price * prod.cantidad}</td>
                                 </tr>
                             )}
                     </tbody>

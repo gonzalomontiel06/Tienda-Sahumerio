@@ -10,7 +10,8 @@ li{
 
         &:hover{
             font-weight: bold;
-            color: #0dcaf0;
+            color: #cdb4db;
+            background-color: #f3f3f3;
         }
     }
 }
@@ -27,7 +28,7 @@ li{
     &--subtitulo{
         text-transform: uppercase;
         font-family: 'Bebas Neue', cursive;
-        border-left: solid 5px #0dcaf0;
+        border-left: solid 5px #cdb4db;
         padding-left: 10px;
         line-height: 1;
         letter-spacing: 0.5px;
@@ -35,6 +36,6 @@ li{
 }
 
 .categorieSelected{
-    color: #0dcaf0;
+    color: #cdb4db;
     font-weight: bold;
 }

@@ -6,7 +6,7 @@ import { NavLink } from 'react-router-dom'
 
 export const NavBar = () => {
     return (
-            <header>
+            <header className='container header'>
                 <nav className="navBar">
                     <NavLink exact to='/'>
                         <img src={logotransparente} alt="logoMarca" />

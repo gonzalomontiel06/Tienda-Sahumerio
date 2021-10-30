@@ -3,6 +3,10 @@
     text-decoration: none;
 }
 
+.header{
+    border-bottom: solid 1px #e7e7e7;
+}
+
 .navBar{
     display: flex;
     justify-content: center;
@@ -22,7 +26,8 @@
 
             &:hover{
                 font-weight: bold;
-                color: #0dcaf0;
+                color: #cdb4db;
+                background-color: #f3f3f3;
             }
         }
     }
@@ -41,9 +46,31 @@
             font-size: 30px;
             margin-bottom: 20px;
         }
+
+        & a{
+            text-decoration: none;
+        }
     }
 }
 
 .linkSelected{
-    border-bottom: solid 3px #0dcaf0;
+    border-bottom: solid 3px #cdb4db;
+}
+
+.cartWidget{
+    color: #cdb4db;
+    
+    &:hover{
+        background-color: #f3f3f3;
+    }
+
+    &__count{
+        color: #cdb4db;
+        font-size: 20px;
+        text-decoration: none;
+        
+        &:hover{
+            background-color: #f3f3f3;
+        }
+    }
 }
