@@ -1,19 +1,30 @@
-.handleBox{
+.countBox{
     display: flex;
     margin-top: 5px;
+    
     &__button{
         width: 36px;
         height: 36px;
         border: solid 1px #e4e4e4;
         background-color: transparent;
         color: #777;
+        font-weight: bold;
     }
 
     &__cantidad{
+        display: flex;
+        justify-content: center;
+        align-items: center;
         width: 36px;
         height: 36px;
         border: solid 1px #e4e4e4;
         color: #777;
         text-align: center;
+    }
+
+    &__disable{
+        @extend .countBox__button;
+        color: darkgray;
+        font-weight: normal;
     }
 }

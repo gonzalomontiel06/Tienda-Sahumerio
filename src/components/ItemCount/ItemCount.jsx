@@ -16,13 +16,12 @@ export const ItemCount = ({cantidad, setCantidad, stock}) => {
     }
 
     return (
-        <div className='handleBox'>
-            <button className='handleBox__button' onClick={handleRestar}>-</button>
-            <div className='handleBox__cantidad'>
-                <span>{cantidad}</span>
+        <div className='countBox'>
+            <button className={cantidad === 0 ? 'countBox__disable' : 'countBox__button'} disabled={cantidad === 0} onClick={handleRestar}>-</button>
+            <div className='countBox__cantidad'>
+                <span style={cantidad === 0 ? {color: 'darkgray'} : {color: 'darkgray'} }>{cantidad}</span>
             </div>
-            <button className='handleBox__button' onClick={handleSumar}>+</button>
+            <button className={cantidad === stock ? 'countBox__disable' : 'countBox__button'} disabled={cantidad === stock} onClick={handleSumar}>+</button>
         </div>
     )
-
 }

@@ -10,7 +10,7 @@ export const CartWidget = () => {
     return (
         <div>
             <RiShoppingCartLine className='cartWidget' />
-            <span className='cartWidget__count'>{calcularItemCart()}</span>
+            <span className={calcularItemCart() === 0 ? 'disable' : 'cartWidget__count'}>{calcularItemCart()}</span>
         </div>
     )
 }

@@ -1,10 +1,14 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import logotransparente from '../../img/logotransparente.png'
 import './navBar.scss'
 import { CartWidget } from './CartWidget'
 import { NavLink } from 'react-router-dom'
+import { CartContext } from '../../context/CartContext'
 
 export const NavBar = () => {
+
+    const {calcularItemCart} = useContext(CartContext)
+
     return (
             <header className='container header'>
                 <nav className="navBar">
@@ -19,7 +23,7 @@ export const NavBar = () => {
                     <div className="navBar__cart">
                         <p>login</p>
                         <NavLink exact to='/cartview'>
-                            <CartWidget />
+                            {calcularItemCart() === 0 ? "" : <CartWidget /> }
                         </NavLink>
                     </div>
                 </nav>
