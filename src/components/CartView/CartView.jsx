@@ -7,7 +7,7 @@ import { Cart } from './Cart';
 
 export const CartView = () => {
 
-    const {carrito } = useContext(CartContext)
+    const {carrito} = useContext(CartContext)
 
     return (
         <div className='container'>

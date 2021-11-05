@@ -32,6 +32,13 @@ export const CartProvider = ({children}) => {
     const calcularTotal = () => {
         return carrito.reduce((acc, prod) => acc + prod.cantidad * prod.price, 0)
     }
+
+    // const updateItem = (cant, prodId) => {
+    //     const itemUpdate = carrito.find((prod) => prod.id === prodId)
+    //     itemUpdate.cantidad = cant + 1
+    //     console.log(itemUpdate);
+    //     setCarrito([...carrito, itemUpdate])
+    // }
     
     return(
         
