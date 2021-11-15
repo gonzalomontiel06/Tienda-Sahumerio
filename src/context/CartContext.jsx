@@ -33,16 +33,16 @@ export const CartProvider = ({children}) => {
         return carrito.reduce((acc, prod) => acc + prod.cantidad * prod.price, 0)
     }
 
-    // const updateItem = (cant, prodId) => {
-    //     const itemUpdate = carrito.find((prod) => prod.id === prodId)
-    //     itemUpdate.cantidad = cant + 1
-    //     console.log(itemUpdate);
-    //     setCarrito([...carrito, itemUpdate])
-    // }
+    const updateItem = (cantidad, prodId) => {
+        const itemUpdate = carrito.find((prod) => prod.id === prodId)
+        itemUpdate.cantidad = cantidad
+        setCarrito([...carrito])
+    }
+
     
     return(
         
-        <CartContext.Provider value={ {carrito, addToCart, removeItem, calcularItemCart, clearCart, isInCart, calcularTotal} }>
+        <CartContext.Provider value={ {carrito, addToCart, removeItem, calcularItemCart, clearCart, isInCart, calcularTotal, updateItem} }>
             {children}
         </CartContext.Provider>
     )
