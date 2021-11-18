@@ -36,19 +36,21 @@
         display: flex;
         align-items: center;
         font-size: 1.1em;
+        width: 12.5rem;
+        text-align: center;
 
         & p {
             margin-right: 30px;
             font-family: 'Quicksand', sans-serif;
         }
 
-        & div {
-            font-size: 30px;
-            margin-bottom: 20px;
-        }
-
         & a{
             text-decoration: none;
+        }
+
+        &__cart{
+            font-size: 1.5em;
+            margin-left: 20px;
         }
     }
 }
@@ -77,4 +79,32 @@
 
 .disable{
     visibility: hidden;
+}
+
+.logOut{
+    font-family: 'Quicksand', sans-serif;
+    background-color: transparent;
+    border: solid 1px #cdb4db;
+    color: #cdb4db;
+    width: 100px;
+
+    &:hover{
+        font-weight: bold;
+        color: #cdb4db;
+        background-color: #f3f3f3;
+    }
+}
+
+.logIn{
+    font-family: 'Quicksand', sans-serif;
+    background-color: transparent;
+    border: solid 1px #cdb4db;
+    color: #cdb4db;
+    width: 100px;
+
+    &:hover{
+        font-weight: bold;
+        color: #cdb4db;
+        background-color: #f3f3f3;
+    }
 }

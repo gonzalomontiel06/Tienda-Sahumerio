@@ -6,6 +6,9 @@ import './item.scss'
 export const Item = ({item}) => {
 
     return(
+
+        // ITEM VIEW
+        
         <div className="col-lg-4 cardFlex" style={{ width: '300px'}}>
             <Card border="ligth" style={{ width: '15rem', margin: '5px' }}>
                 <Card.Img variant="top" src={item.img} />

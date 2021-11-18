@@ -14,6 +14,9 @@ export const Cart = () => {
         }
 
         return (
+
+            // CART VIEW
+            
             <>
                 <div className='container my-4 table'>
                     

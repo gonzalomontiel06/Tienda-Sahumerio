@@ -13,6 +13,7 @@ export const ItemDetailContainer = () => {
 
     const {itemId} = useParams()
 
+    // USE EFFECT PARA LLAMAR PRODUCTOS X FIREBASE 
     useEffect(() => {
         
         const bd = getFirestore()

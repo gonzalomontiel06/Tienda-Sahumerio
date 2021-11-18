@@ -15,25 +15,24 @@ export const ItemListContainer = () => {
 
     const {categoryId} = useParams()
 
+    // USE EFFECT PARA PEDIR PRODUCTOS X FIREBASE
     useEffect(() => {
-
         const db = getFirestore()
-
         const productos = categoryId
                             ? db.collection('productos').where('category', '==', categoryId)
                             : db.collection('productos')
-
+            
             productos.get()
-
+                
                 .then((response) => {
                     const newItem = response.docs.map((doc) => {
                         return {id: doc.id, ...doc.data()}
                     })
                     setItems(newItem)
                 })
-
+                
                 .catch((error) => console.log(error))
-
+                
                 .finally(() => {
                     setLoading(false)
                 })

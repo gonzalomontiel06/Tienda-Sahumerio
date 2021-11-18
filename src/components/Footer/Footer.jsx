@@ -1,15 +1,25 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import './footer.scss'
 import { BiRightArrowAlt } from 'react-icons/bi'
 import { AiFillInstagram, AiFillFacebook, AiFillMail, AiFillPhone } from 'react-icons/ai'
 import { RiWhatsappFill } from 'react-icons/ri'
 import { TiLocation } from 'react-icons/ti'
-import logotransparente from '../../img/logotransparente.png'
 import { NavLink } from 'react-router-dom'
+import { getLogo } from '../../helpers/getLogo'
 
 
 export const Footer = () => {
 
+    const [logoTransparente, setLogoTransparente] = useState({}) 
+
+    // USE EFFECT FOR LOGO
+    
+    useEffect(() => {
+        getLogo(setLogoTransparente)
+    },[])
+
+    // EXTERNAL LINKS
+    
     const maps = () => {
         window.open('https://www.google.com.ar/maps/place/Av.+Chivilcoy+15,+C1407ADA+C1407ADA+1407ADB,+Buenos+Aires/@-34.6335354,-58.4838679,17z/data=!3m1!4b1!4m5!3m4!1s0x95bcc996e0587db3:0x70cd4c4889da055d!8m2!3d-34.6335398!4d-58.4816792')
     }
@@ -27,6 +37,9 @@ export const Footer = () => {
     }
 
     return (
+        
+        // FOOTER VIEW
+        
         <>
             <section className='container footer'>
                 <div className='container footer__flex'>
@@ -47,7 +60,7 @@ export const Footer = () => {
                 <div className='container' style={ {display: 'flex'} }>
                 
                     <div className='footerMap__links'>
-                        <NavLink exact to='/'><img src={logotransparente} alt="logo" /></NavLink>
+                        <NavLink exact to='/'><img src={logoTransparente.logo} alt="logo" /></NavLink>
                         <div className='footerMap__links__icons'>
                             <button className='footerMap__links__icons--button' onClick={() => instagram()}><AiFillInstagram /></button>
                             <button className='footerMap__links__icons--button' onClick={() => facebook()}><AiFillFacebook /></button>

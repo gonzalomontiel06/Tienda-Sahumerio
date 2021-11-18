@@ -27,6 +27,8 @@ export const Checkout = () => {
         })
     }
 
+    // FUNCION GENERAR ORDEN DE COMPRA
+    
     const handleSubmit = (e) => {
         
         e.preventDefault()
@@ -62,13 +64,15 @@ export const Checkout = () => {
 
     return (
 
+        // CHECKOUT VIEW
+
         <>
             {carrito.length === 0 && <Redirect to='/' />}
             
             {loading
                 
                 ? 
-                    <div style={{textAlign: 'center'}}>
+                    <div className='my-5' style={{textAlign: 'center'}}>
                         <Spinner animation="grow" />
                     </div>
                 

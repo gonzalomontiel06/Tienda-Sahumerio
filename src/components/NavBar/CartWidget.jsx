@@ -8,7 +8,7 @@ export const CartWidget = () => {
     const {calcularItemCart} = useContext(CartContext)
     
     return (
-        <div>
+        <div className='mb-2'>
             <RiShoppingCartLine className='cartWidget' />
             <span className={calcularItemCart() === 0 ? 'disable' : 'cartWidget__count'}>{calcularItemCart()}</span>
         </div>

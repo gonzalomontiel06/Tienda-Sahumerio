@@ -10,6 +10,9 @@ import { LoadingProvider } from './context/LoadingContext';
 import { Footer } from './components/Footer/Footer';
 import { HomeView } from './components/HomeView/HomeView';
 import { Checkout } from './components/Checkout/Checkout';
+import { Login } from './components/Login/Login';
+import { LoginProvider } from './context/LoginContext';
+import { SignUp } from './components/SignUp/SignUp';
 
 export const App = () => {
 
@@ -18,6 +21,7 @@ export const App = () => {
         <div className="App">
             <LoadingProvider>
                 <CartProvider>
+                    <LoginProvider>
                         <BrowserRouter>
                             <NavBar />
                             <Switch>
@@ -30,9 +34,6 @@ export const App = () => {
                                 <Route exact path='/categories/:categoryId'>
                                     <ItemListContainer />
                                 </Route>
-                                <Route exact path='/contacto'>
-                                    <h3>contacto</h3>
-                                </Route>
                                 <Route exact path='/detail/:itemId'>
                                     <ItemDetailContainer />
                                 </Route>
@@ -42,9 +43,16 @@ export const App = () => {
                                 <Route exact path='/checkout'>
                                     <Checkout />
                                 </Route>
+                                <Route exact path='/login'>
+                                    <Login />
+                                </Route>
+                                <Route exact path='/signup'>
+                                    <SignUp />
+                                </Route>
                             </Switch>
                             <Footer />
                         </BrowserRouter>
+                    </LoginProvider>
                 </CartProvider>
             </LoadingProvider>
         </div>

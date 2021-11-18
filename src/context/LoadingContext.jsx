@@ -2,6 +2,7 @@ import React, { createContext, useState } from 'react'
 
 export const LoadingContext = createContext()
 
+// COMPONENTE LOADER
 export const LoadingProvider = ({children}) => {
 
         const [loading, setLoading] = useState(true)

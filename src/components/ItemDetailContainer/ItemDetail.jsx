@@ -13,6 +13,7 @@ export const ItemDetail = ({name, price, description, img, id, category, stock})
 
     const [cantidad, setCantidad] = useState(0)
 
+    // FUNCION AGREGAR ITEM A CART
     const handleAgregar = () => {
         const newItem = {
             name,
@@ -29,6 +30,9 @@ export const ItemDetail = ({name, price, description, img, id, category, stock})
 }
 
     return (
+
+        // ITEM DETAIL VIEW
+        
         <div className='container my-4 itemDetail'>
             <div className='itemDetail__img'>
                 <img src={img} alt={name} />

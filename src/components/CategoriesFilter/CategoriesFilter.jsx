@@ -4,6 +4,8 @@ import './categoriesFilter.scss'
 export const CategoriesFilter = () => {
 
     return(
+
+        // CATEGORY VIEW
         
         <div className='categories'>
             

@@ -8,13 +8,16 @@ export const EmptyCart = () => {
 
 
         return(
+
+            // EMPTY CART VIEW
+            
             <>
                 <div className='container my-5 clearCart'>
                     <AiOutlineInfoCircle className='clearCart__icon' />
                     <h3 className='clearCart__subtitle'>su carrito esta vacio</h3>
                 </div>
                 <div className='container'>
-                    <Link exact to='/'>
+                    <Link exact to='/productos'>
                         <button className='backShop'> <BiLeftArrowAlt /> volver a la tienda </button>
                     </Link>
                 </div>

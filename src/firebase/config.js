@@ -1,7 +1,8 @@
 import firebase from 'firebase/app'
 import 'firebase/firestore'
 
-// Your web app's Firebase configuration
+// CONFIGURACION DE FIREBASE
+
 const firebaseConfig = {
     apiKey: "AIzaSyDDb8BDmmln7-alUEbSeqj2YE87tbAXPqU",
     authDomain: "loco-del-sahumerio.firebaseapp.com",
@@ -17,3 +18,6 @@ export const getFirestore = () => {
     return firebase.firestore(app)
 }
 
+export const getAuth = () => {
+    return firebase.auth(app)
+}

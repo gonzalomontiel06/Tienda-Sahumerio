@@ -3,6 +3,8 @@ import './itemCount.scss'
 
 export const ItemCount = ({cantidad, setCantidad, stock}) => {
 
+    // FUNCION CAMBIAR ESTADO DE CANTIDAD
+    
     const handleRestar = () => {
         if (cantidad > 0) {
             setCantidad(cantidad - 1)
