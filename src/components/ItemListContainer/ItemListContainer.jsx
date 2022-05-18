@@ -6,6 +6,8 @@ import { useParams } from 'react-router'
 import { CategoriesFilter } from '../CategoriesFilter/CategoriesFilter'
 import { LoadingContext } from '../../context/LoadingContext'
 import { getFirestore } from '../../firebase/config'
+import { PriceFilter } from '../PriceFilter/PriceFilter'
+import { FilterContext } from '../../context/FilterContext'
 
 export const ItemListContainer = () => {
 
@@ -13,7 +15,9 @@ export const ItemListContainer = () => {
 
     const {loading, setLoading} = useContext(LoadingContext)
 
-    const {categoryId} = useParams()
+    const {categoryId, menorPrecio, mayorPrecio} = useParams()
+
+    const {handleMenorPrecio, handleMayorPrecio} = useContext(FilterContext)
 
     // USE EFFECT PARA PEDIR PRODUCTOS X FIREBASE
     useEffect(() => {
@@ -28,6 +32,7 @@ export const ItemListContainer = () => {
                     const newItem = response.docs.map((doc) => {
                         return {id: doc.id, ...doc.data()}
                     })
+
                     setItems(newItem)
                 })
                 
@@ -38,6 +43,14 @@ export const ItemListContainer = () => {
                 })
 
         },[categoryId, setLoading])
+
+    useEffect(() => {
+
+        menorPrecio && handleMenorPrecio(items)
+        mayorPrecio && handleMayorPrecio(items)
+        setItems(items)
+
+    },[handleMenorPrecio, items, menorPrecio, mayorPrecio, handleMayorPrecio ])
 
         return (
             
@@ -53,6 +66,7 @@ export const ItemListContainer = () => {
 
                                             <div className='col-lg-2'>
                                                 <CategoriesFilter />
+                                                <PriceFilter />
                                             </div>
 
                                             <div className='main__section col-lg-10'>

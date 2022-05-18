@@ -1,0 +1,42 @@
+.notFound{
+    width: 60rem;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    border: solid 1px #cdb4db;
+
+    &__icon{
+        width: 22px;
+        height: 22px;
+        color: #6c757d;
+    }
+
+    &__subtitle{
+        font-family: "Quicksand", sans-serif;
+        text-transform: uppercase;
+        margin: 0;
+        color: #777;
+        font-size: 1em;
+        margin-left: 10px;
+    }
+}
+
+.backShop{
+    font-family: "Quicksand", sans-serif;
+    border-radius: 20px;
+    font-size: 15px;
+    padding: 10px;
+    text-transform: uppercase;
+    font-weight: 800;
+    color: #cdb4db;
+    margin-left: 150px;
+    background-color: transparent;
+    border: solid 1px #cdb4db;
+    text-decoration: none;
+
+
+    &:hover{
+        color: white;
+        background-color: #cdb4db;
+    }
+}

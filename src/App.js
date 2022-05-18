@@ -13,6 +13,8 @@ import { Checkout } from './components/Checkout/Checkout';
 import { Login } from './components/Login/Login';
 import { LoginProvider } from './context/LoginContext';
 import { SignUp } from './components/SignUp/SignUp';
+import { NotFound } from './components/NotFound/NotFound';
+import { FilterProvider } from './context/FilterContext';
 
 export const App = () => {
 
@@ -24,32 +26,43 @@ export const App = () => {
                     <LoginProvider>
                         <BrowserRouter>
                             <NavBar />
-                            <Switch>
-                                <Route exact path='/'>
-                                    <HomeView />
-                                </Route>
-                                <Route exact path='/productos'>
-                                    <ItemListContainer />
-                                </Route>
-                                <Route exact path='/categories/:categoryId'>
-                                    <ItemListContainer />
-                                </Route>
-                                <Route exact path='/detail/:itemId'>
-                                    <ItemDetailContainer />
-                                </Route>
-                                <Route exact path='/cartview'>
-                                    <CartView />
-                                </Route>
-                                <Route exact path='/checkout'>
-                                    <Checkout />
-                                </Route>
-                                <Route exact path='/login'>
-                                    <Login />
-                                </Route>
-                                <Route exact path='/signup'>
-                                    <SignUp />
-                                </Route>
-                            </Switch>
+                            <FilterProvider>
+                                <Switch>
+                                    <Route exact path='/'>
+                                        <HomeView />
+                                    </Route>
+                                    <Route exact path='/productos'>
+                                        <ItemListContainer />
+                                    </Route>
+                                    <Route exact path='/categories/:categoryId'>
+                                        <ItemListContainer />
+                                    </Route>
+                                    <Route exact path='/orden/:menorPrecio'>
+                                        <ItemListContainer />
+                                    </Route>
+                                    <Route exact path='/orden/:mayorPrecio'>
+                                        <ItemListContainer />
+                                    </Route>
+                                    <Route exact path='/detail/:itemId'>
+                                        <ItemDetailContainer />
+                                    </Route>
+                                    <Route exact path='/cartview'>
+                                        <CartView />
+                                    </Route>
+                                    <Route exact path='/checkout'>
+                                        <Checkout />
+                                    </Route>
+                                    <Route exact path='/login'>
+                                        <Login />
+                                    </Route>
+                                    <Route exact path='/signup'>
+                                        <SignUp />
+                                    </Route>
+                                    <Route exact path='*'>
+                                        <NotFound />
+                                    </Route>
+                                </Switch>
+                            </FilterProvider>
                             <Footer />
                         </BrowserRouter>
                     </LoginProvider>
