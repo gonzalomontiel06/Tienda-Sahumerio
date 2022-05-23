@@ -30,6 +30,7 @@ export const NavBar = () => {
                     <section className="navBar__list">
                         <NavLink activeClassName={'linkSelected'} exact to='/'>home</NavLink>
                         <NavLink activeClassName={'linkSelected'} exact to='/productos'>productos</NavLink>
+                        <NavLink activeClassName={'linkSelected'} exact to='/raro'>raro</NavLink>
                     </section>
                     <div className="navBar__cart">
                             {userAuth
