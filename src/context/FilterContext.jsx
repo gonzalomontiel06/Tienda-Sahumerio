@@ -19,8 +19,8 @@ export const FilterProvider = ({children}) => {
     }
 
     return(
-        <FilterContext.Provider value={ {handleMenorPrecio, handleMayorPrecio} }>
-            {children}
-        </FilterContext.Provider>
+            <FilterContext.Provider value={ {handleMenorPrecio, handleMayorPrecio} }>
+                {children}
+            </FilterContext.Provider>
     )
 }
