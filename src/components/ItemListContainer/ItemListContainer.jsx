@@ -44,13 +44,9 @@ export const ItemListContainer = () => {
 
         },[categoryId, setLoading])
 
-    useEffect(() => {
-
-        menorPrecio && handleMenorPrecio(items)
         mayorPrecio && handleMayorPrecio(items)
-        setItems(items)
+        menorPrecio && handleMenorPrecio(items)
 
-    },[handleMenorPrecio, items, menorPrecio, mayorPrecio, handleMayorPrecio ])
 
         return (
             
