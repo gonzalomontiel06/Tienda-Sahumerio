@@ -1,0 +1,39 @@
+.subtitle{
+        text-transform: uppercase;
+        font-family: 'Bebas Neue', cursive;
+        border-left: solid 5px #cdb4db;
+        padding-left: 10px;
+        line-height: 1;
+        letter-spacing: 0.5px;
+}
+
+.price{
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+
+    & a{
+        text-decoration: none;
+        font-family: 'Quicksand', sans-serif;
+        color: black;
+        padding: 3px;
+        border-bottom: solid 1px #cdb4db;
+
+        &:hover{
+            font-weight: bold;
+            color: #cdb4db;
+            background-color: #f3f3f3;
+        }
+    }
+}
+
+.categorieSelected{
+    color: #cdb4db;
+    font-weight: bold;
+}
+
+.asd{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

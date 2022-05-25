@@ -17,21 +17,24 @@ li{
 }
 
 .categories{
-    margin: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
 
     &__list{
         text-align: start;
-        padding: 0;
     }
 
     &--subtitulo{
         text-transform: uppercase;
         font-family: 'Bebas Neue', cursive;
         border-left: solid 5px #cdb4db;
-        padding-left: 10px;
         line-height: 1;
         letter-spacing: 0.5px;
+        text-align: start;
+        padding-left: 10px;
+
     }
 }
 
