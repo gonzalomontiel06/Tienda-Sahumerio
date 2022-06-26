@@ -47,7 +47,7 @@ export const Cart = () => {
                                         <td id='name'>{prod.name}</td>
                                         <td>${prod.price}</td>
                                         <td>
-                                            <button className='button-' onClick={() => handleCantidad(prod.cantidad - 1, prod.id)}>-</button>
+                                            <button className='button-' onClick={() => handleCantidad(prod.cantidad - 1, prod.id)} disabled={prod.cantidad === 0}>-</button>
                                             <span style={ {margin: '10px'} }>{prod.cantidad}</span>
                                             <button className='button-' onClick={() => handleCantidad(prod.cantidad + 1, prod.id)}>+</button>
                                         </td>

@@ -44,9 +44,8 @@ export const ItemListContainer = () => {
 
         },[categoryId, setLoading])
 
-        mayorPrecio && handleMayorPrecio(items)
         menorPrecio && handleMenorPrecio(items)
-
+        mayorPrecio && handleMayorPrecio(items)
 
         return (
             

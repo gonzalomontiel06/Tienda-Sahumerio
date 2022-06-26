@@ -1,0 +1,100 @@
+.volver{
+    font-family: "Quicksand", sans-serif;
+    color: #cdb4db;
+    border: none;
+    background-color: transparent;
+    font-size: 30px;
+
+    &:hover{
+        background-color: #f3f3f3;
+    }
+}
+
+.modItem{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &--sub{
+        font-family: "Quicksand", sans-serif;
+    }
+
+    &__itemBox{
+        display: flex;
+        width: 43rem;
+        height: 45rem;
+        background-color: #f8f9fa;
+        border-radius: 20px;
+
+        &__img{
+            width: 40%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        &__form{
+            width: 60%;
+            display: flex;
+            flex-direction: column;
+
+            &__buttonItem{
+                font-family: "Quicksand", sans-serif;
+                border-radius: 20px;
+                font-size: 15px;
+                padding: 10px;
+                text-transform: uppercase;
+                font-weight: 800;
+                color: #cdb4db;
+                background-color: transparent;
+                border: solid 1px #cdb4db;
+                text-decoration: none;
+
+                    &:hover{
+                        color: white;
+                        background-color: #cdb4db;
+                    }
+                }
+
+            &__div{
+                margin: 15px;
+                display: flex;
+                flex-direction: column;
+
+                & label {
+                    font-family: "Quicksand", sans-serif;
+                    font-size: 20px;
+                    font-weight: bolder;
+                }
+
+                &__inputItem{
+                    border: none;
+                    outline: none;
+                    background-color: transparent;
+                    border-bottom: solid 3px #cdb4db;
+                    
+                    &:hover{
+                        border-bottom: solid 3px #9448c0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.inputCategory{
+    width: 300px;
+}
+
+.inputPrice{
+    width: 150px;
+}
+
+.inputStock{
+    @extend .inputPrice
+}
+
+.inputDescrp{
+    height: 100px;
+    width: 300px;
+}

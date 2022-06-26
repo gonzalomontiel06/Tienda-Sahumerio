@@ -8,13 +8,13 @@ export const PriceFilter = () => {
         <div className='asd mt-4'>
             <h4 className='subtitle'>ordenar por</h4>
             <div className='price'>
-                <NavLink activeClassName={'categorieSelected'} exact to='/productos'>
+                <NavLink activeClassName={'categorieSelectedd'} exact to='/productos'>
                     Mas relevante
                 </NavLink>
-                <NavLink activeClassName={'categorieSelected'} exact to='/orden/menorPrecio'>
+                <NavLink activeClassName={'categorieSelectedd'} exact to='/orden/menorPrecio'>
                     Menor precio
                 </NavLink>
-                <NavLink activeClassName={'categorieSelected'} exact to='/orden/mayorPrecio'>
+                <NavLink activeClassName={'categorieSelectedd'} exact to='/orden/mayorPrecio'>
                     Mayor precio
                 </NavLink>
             </div>

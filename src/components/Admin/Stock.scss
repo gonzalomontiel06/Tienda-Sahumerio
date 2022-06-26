@@ -1,0 +1,55 @@
+.table{
+    display: flex;
+    justify-content: center;
+    border-color: #eaeaea;
+
+    &__prod{
+        width: 65rem;
+        border-color: #eaeaea;
+        
+        &__head{
+            background-color: #f7f7f7;
+            text-align: center;
+            
+            tr {
+                text-align: center;
+            }
+            
+            th {
+                height: 55px;
+                text-transform: uppercase;
+                font-family: "Quicksand", sans-serif;
+            }
+        }
+
+        &__body tr td{
+            font-family: "Quicksand", sans-serif;
+            font-weight: 600;
+            text-align: center;
+        }
+    }
+}
+
+#prod{
+    width: 250px;
+    text-align: start;
+}
+
+#name{
+    text-align: start;
+}
+
+.icon{
+    font-size: 15px;
+    color: black;
+
+    &:hover{
+        color: #cdb4db;
+    }
+}
+
+.stock{
+    font-family: 'Bebas Neue', cursive;
+    text-align: center;
+    text-transform: uppercase;
+}

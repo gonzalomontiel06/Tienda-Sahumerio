@@ -34,7 +34,7 @@ export const Login = () => {
         
         // LOGIN VIEW
         <>
-            {userAuth && <Redirect exact to='/cartview' />}
+            {userAuth && <Redirect exact to='/' />}
         
             <div className='container d-flex align-items-center justify-content-center my-5'>
                 <div className='row d-flex align-items-center justify-content-space'>

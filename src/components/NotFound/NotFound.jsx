@@ -13,7 +13,7 @@ export const NotFound = () => {
             </div>
 
             <div className='container'>
-                <Link exact to='/'>
+                <Link to='/'>
                     <button className='backShop'> <BiLeftArrowAlt /> volver a la tienda </button>
                 </Link>
             </div>

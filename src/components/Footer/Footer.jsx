@@ -4,7 +4,7 @@ import { BiRightArrowAlt } from 'react-icons/bi'
 import { AiFillInstagram, AiFillFacebook, AiFillMail, AiFillPhone } from 'react-icons/ai'
 import { RiWhatsappFill } from 'react-icons/ri'
 import { TiLocation } from 'react-icons/ti'
-import { NavLink } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 import { getLogo } from '../../helpers/getLogo'
 
 
@@ -50,7 +50,9 @@ export const Footer = () => {
                         </div>
                     </div>
                     <div className='container footer__form'>
-                        <button className='footer__form__button'>suscribirse a las newsletters <BiRightArrowAlt /></button>
+                        <Link to='/signup'>
+                            <button className='footer__form__button'>suscribirse a las newsletters <BiRightArrowAlt /></button>
+                        </Link>
                     </div>
                 </div>
             </section>

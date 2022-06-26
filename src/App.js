@@ -15,6 +15,8 @@ import { LoginProvider } from './context/LoginContext';
 import { SignUp } from './components/SignUp/SignUp';
 import { NotFound } from './components/NotFound/NotFound';
 import { FilterProvider } from './context/FilterContext';
+import { Admin } from './components/Admin/Admin';
+import { EditStock } from './components/EditStock/EditStock';
 
 export const App = () => {
 
@@ -57,6 +59,12 @@ export const App = () => {
                                     </Route>
                                     <Route exact path='/signup'>
                                         <SignUp />
+                                    </Route>
+                                    <Route exact path='/admin'>
+                                        <Admin />
+                                    </Route>
+                                    <Route exact path='/edit/:editId'>
+                                        <EditStock />
                                     </Route>
                                     <Route exact path='*'>
                                         <NotFound />

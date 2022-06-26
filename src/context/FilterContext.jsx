@@ -13,7 +13,7 @@ export const FilterProvider = ({children}) => {
 
     const handleMayorPrecio = (items) => {
         items.sort((a,b) => {
-            return b.price - a.price
+            return a.price - b.price
         })
         console.log(items);
     }
