@@ -4,6 +4,7 @@ import { getFirestore } from '../../firebase/config'
 import { LoadingContext } from '../../context/LoadingContext'
 import { Spinner } from 'react-bootstrap'
 import { Stock } from './Stock'
+import { GrAddCircle } from 'react-icons/gr';
 
 
 
@@ -44,11 +45,16 @@ export const Admin = () => {
                                 <Spinner animation="grow" />
                             </div>
                         : 
-                            <div className='container'>
+                            <>
                                 <div>
-                                    <Stock items={items} />
+                                    <GrAddCircle />
                                 </div>
-                            </div>
+                                <div className='container'>
+                                    <div>
+                                        <Stock items={items} />
+                                    </div>
+                                </div>
+                            </>
                 }
         </section>
     )

@@ -23,9 +23,9 @@ export const App = () => {
     return(
         
         <div className="App">
-            <LoadingProvider>
-                <CartProvider>
-                    <LoginProvider>
+            <LoginProvider>
+                <LoadingProvider>
+                    <CartProvider>
                         <BrowserRouter>
                             <NavBar />
                             <FilterProvider>
@@ -73,9 +73,9 @@ export const App = () => {
                             </FilterProvider>
                             <Footer />
                         </BrowserRouter>
-                    </LoginProvider>
-                </CartProvider>
-            </LoadingProvider>
+                    </CartProvider>
+                </LoadingProvider>
+            </LoginProvider>
         </div>
     )
 }

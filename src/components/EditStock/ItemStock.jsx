@@ -50,7 +50,7 @@ export const ItemStock = ({category, name, price, stock, description, id, img}) 
                 <button className='volver mt-4' onClick={() => goBack()}><BiLeftArrowAlt /> volver </button>
                 <div className='container modItem'>
                     <h2 className='modItem--sub'>{name}</h2>
-                    <div className='modItem__itemBox'>
+                    <div className='modItem__itemBox mt-4'>
                         <form className='modItem__itemBox__form' onSubmit={handleSubmit}>
                             <div className='modItem__itemBox__form__div'>
                                 <label htmlFor="name" className='spanItem'>Nombre:</label>
@@ -72,7 +72,7 @@ export const ItemStock = ({category, name, price, stock, description, id, img}) 
                             <label htmlFor="description" className='spanItem'>Descripcion:</label>
                                 <textarea name="description" className='modItem__itemBox__form__div__inputItem inputDescrp mt-2' value={values.description} onChange={handleChange} ></textarea>
                             </div>
-                            <button type='submit' className='modItem__itemBox__form__buttonItem mt-3'>modificar</button>
+                            <button type='submit' className='modItem__itemBox__form__buttonItem mt-3 mx-5'>modificar</button>
                         </form>
                         <div className='modItem__itemBox__img'>
                             <img src={img} alt={name} width='200px' />

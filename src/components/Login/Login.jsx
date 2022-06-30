@@ -67,7 +67,7 @@ export const Login = () => {
                                 Log in
                             </button>
                         </form>
-                        <small className='text-center mt-3'> No tenes cuenta? <Link exact to='/signup'>Sign up</Link></small>
+                        <small className='text-center mt-3'> No tenes cuenta? <Link to='/signup'>Sign up</Link></small>
                     </div>
                 </div>
             </div>

@@ -15,7 +15,6 @@ export const Stock = ({items}) => {
                             <th id='prod'>producto</th>
                             <th>precio</th>
                             <th>stock</th>
-                            <th>categoria</th>
                             <th>&nbsp;</th>
                         </tr>
                     </thead>
@@ -27,7 +26,6 @@ export const Stock = ({items}) => {
                             <td id='name'>{item.name}</td>
                             <td>${item.price}</td>
                             <td>{item.stock}</td>
-                            <td>{item.category}</td>
                             <td>
                                 <NavLink to={`/edit/${item.id}`}>
                                     <RiEdit2Fill className='icon'/>
