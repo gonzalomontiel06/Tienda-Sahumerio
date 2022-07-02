@@ -4,9 +4,8 @@ import { getFirestore } from '../../firebase/config'
 import { LoadingContext } from '../../context/LoadingContext'
 import { Spinner } from 'react-bootstrap'
 import { Stock } from './Stock'
-import { GrAddCircle } from 'react-icons/gr';
-
-
+import { IoIosAddCircleOutline } from 'react-icons/io';
+import { Link } from 'react-router-dom'
 
 
 export const Admin = () => {
@@ -46,11 +45,13 @@ export const Admin = () => {
                             </div>
                         : 
                             <>
-                                <div>
-                                    <GrAddCircle />
+                                <div className='stock__add'>
+                                    <Link to='/addItem'>
+                                        <IoIosAddCircleOutline className='iconAdd' />
+                                    </Link>
                                 </div>
                                 <div className='container'>
-                                    <div>
+                                    <div className='container'>
                                         <Stock items={items} />
                                     </div>
                                 </div>

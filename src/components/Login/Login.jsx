@@ -2,6 +2,7 @@ import React, { useContext, useState } from "react";
 import { Redirect } from "react-router";
 import { LoginContext } from "../../context/LoginContext";
 import { Link } from "react-router-dom";
+import Swal from 'sweetalert2'
 import './login.scss'
 
 export const Login = () => {
@@ -28,6 +29,12 @@ export const Login = () => {
         login(email, password)
             .then((res) => console.log(res))
             .catch((err) => console.log(err))
+            .finally(() => {
+                Swal.fire({
+                    icon: 'success',
+                    title: 'Bienvenido',
+                })
+            })
     }
 
     return(

@@ -52,4 +52,22 @@
     font-family: 'Bebas Neue', cursive;
     text-align: center;
     text-transform: uppercase;
+
+    &__add{
+        width: 90%;
+        display: flex;
+        justify-content: flex-end;
+    }
+}
+
+.iconAdd{
+    font-size: 50px;
+    color: #cdb4db;
+    margin-right: 20px;
+
+    &:hover{
+        background-color: #cdb4db;
+        color: white;
+        border-radius: 30px;
+    }
 }

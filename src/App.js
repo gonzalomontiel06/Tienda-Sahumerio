@@ -17,6 +17,7 @@ import { NotFound } from './components/NotFound/NotFound';
 import { FilterProvider } from './context/FilterContext';
 import { Admin } from './components/Admin/Admin';
 import { EditStock } from './components/EditStock/EditStock';
+import { AddItem } from './components/AddItem/AddItem';
 
 export const App = () => {
 
@@ -65,6 +66,9 @@ export const App = () => {
                                     </Route>
                                     <Route exact path='/edit/:editId'>
                                         <EditStock />
+                                    </Route>
+                                    <Route exact path='/AddItem'>
+                                        <AddItem />
                                     </Route>
                                     <Route exact path='*'>
                                         <NotFound />
