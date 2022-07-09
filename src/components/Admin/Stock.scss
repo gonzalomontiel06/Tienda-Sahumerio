@@ -71,3 +71,12 @@
         border-radius: 30px;
     }
 }
+
+.deleteItem{
+    height: 23px;
+    width: 23px;
+    
+    &:hover{
+        color: #cdb4db;
+    }
+}

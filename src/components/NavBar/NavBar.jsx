@@ -1,7 +1,7 @@
 import React, { useContext, useState, useEffect } from 'react'
 import './navBar.scss'
 import { CartWidget } from './CartWidget'
-import { NavLink } from 'react-router-dom'
+import { NavLink, Redirect } from 'react-router-dom'
 import { CartContext } from '../../context/CartContext'
 import { getLogo } from '../../helpers/getLogo'
 import { LoginContext } from '../../context/LoginContext'
@@ -46,6 +46,9 @@ export const NavBar = () => {
                                 : 
                                     <NavLink className='logIn' exact to='/login'>log in</NavLink>
                             }
+
+                            {currentUser === null && <Redirect exact to='/' />}
+
                         <NavLink exact to='/cartview' className='navBar__cart__cart'>
                             {calcularItemCart() === 0 ? "" : <CartWidget /> }
                         </NavLink>

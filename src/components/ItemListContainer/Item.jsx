@@ -23,6 +23,3 @@ export const Item = ({item}) => {
         </div>
     )
 }
-
-
-// style={{fontWeight: 'bold', color: '#cdb4db'}}
