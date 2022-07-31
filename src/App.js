@@ -18,6 +18,8 @@ import { FilterProvider } from './context/FilterContext';
 import { Admin } from './components/Admin/Admin';
 import { EditStock } from './components/EditStock/EditStock';
 import { AddItem } from './components/AddItem/AddItem';
+import { MyAccount } from './components/MyAccount/MyAccount';
+import { Ventas } from './components/Ventas/Ventas';
 
 export const App = () => {
 
@@ -69,6 +71,12 @@ export const App = () => {
                                     </Route>
                                     <Route exact path='/AddItem'>
                                         <AddItem />
+                                    </Route>
+                                    <Route exact path='/account'>
+                                        <MyAccount />
+                                    </Route>
+                                    <Route exact path='/ventas'>
+                                        <Ventas />
                                     </Route>
                                     <Route exact path='*'>
                                         <NotFound />

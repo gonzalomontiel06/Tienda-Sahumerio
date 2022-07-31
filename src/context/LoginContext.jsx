@@ -1,5 +1,6 @@
 import React, { createContext, useEffect, useState } from 'react'
 import { getAuth } from '../firebase/config'
+import Swal from 'sweetalert2'
 
 export const LoginContext = createContext()
 
@@ -11,12 +12,30 @@ export const LoginProvider = ({children}) => {
     const [currentUser, setCurrentUser] = useState(null)
     const [userAuth, setUserAuth] = useState(false)
 
+    const Toast = Swal.mixin({
+        toast: true,
+        position: 'top-end',
+        showConfirmButton: false,
+        timer: 4000,
+        timerProgressBar: true,
+            didOpen: (toast) => {
+                toast.addEventListener('mouseenter', Swal.stopTimer)
+                toast.addEventListener('mouseleave', Swal.resumeTimer)
+            }
+        })
+
     const login = (mail, pw) => {
         return auth.signInWithEmailAndPassword(mail, pw)
     }
 
     const logout = () => {
-        return auth.signOut()
+        auth.signOut()
+        .finally(() => {
+            Toast.fire({
+                icon: 'success',
+                title: 'Sesión finalizada'
+            })
+        })
     }
 
     const signUp = (mail, pw) => {

@@ -18,7 +18,7 @@ export const EmptyCart = () => {
                 </div>
                 <div className='container'>
                     <Link exact to='/productos'>
-                        <button className='backShop'> <BiLeftArrowAlt /> volver a la tienda </button>
+                        <button className='backShop'> <BiLeftArrowAlt /> Ir a la tienda</button>
                     </Link>
                 </div>
             </>

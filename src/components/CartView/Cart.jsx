@@ -3,6 +3,7 @@ import { GiCancel } from "react-icons/gi";
 import { FaRegTrashAlt } from 'react-icons/fa'
 import { CartContext } from '../../context/CartContext';
 import { NavLink } from 'react-router-dom';
+import { LoginContext } from '../../context/LoginContext';
 
 
 export const Cart = () => {
@@ -12,6 +13,8 @@ export const Cart = () => {
         const handleCantidad = (cant, prodId) => {
                 updateItem(cant, prodId)
         }
+
+        const {userAuth} = useContext(LoginContext)
 
         return (
 
@@ -85,7 +88,12 @@ export const Cart = () => {
                             </tbody>
                         </table>
                         <div className='finalizarCompra__box'>
-                            <NavLink exact to='/checkout' className='finalizarCompra__box__button'>Realizar compra</NavLink>
+                            {userAuth
+                                ? 
+                                    <NavLink exact to='/checkout' className='finalizarCompra__box__button'>Realizar compra</NavLink>
+                                :
+                                <NavLink exact to='/signup' className='finalizarCompra__box__button'>Realizar compra</NavLink>
+                        }  
                         </div>
                     </div>
                 </div>

@@ -10,7 +10,8 @@ export const generarOrden = (carrito, values, total) => {
             buyer: values,
             items: carrito,
             total: total,
-            date: firebase.firestore.Timestamp.fromDate(new Date())
+            date: firebase.firestore.Timestamp.fromDate(new Date()),
+            estado: true
         }
     
         const db = getFirestore()

@@ -19,6 +19,8 @@ export const AddItem = () => {
                         Swal.fire({
                             icon: 'success',
                             title: 'Producto agregado',
+                            confirmButtonColor: '#cdb4db',
+                            width: '450px',
                             willClose: () => {
                                 goBack()
                             }

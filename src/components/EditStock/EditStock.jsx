@@ -70,8 +70,11 @@ export const EditStock = () => {
                 
                 .finally(() => {
                     Swal.fire({
+                        position: 'center',
                         icon: 'success',
-                        title: 'Item modificado',
+                        title: 'item modificado',
+                        showConfirmButton: false,
+                        timer: 1500,
                         willClose: () => {
                             goBack()
                         }

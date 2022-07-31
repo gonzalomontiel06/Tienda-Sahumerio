@@ -1,0 +1,130 @@
+.ventas{
+    display: flex;
+    flex-direction: column;
+
+    &--sub{
+        font-family: 'Bebas Neue', cursive;
+        text-transform: uppercase;
+        text-align: center;
+    }
+
+    &__id{
+        background-color: #f7f7f7;
+        border-radius: 10px;
+
+        &--sub{
+            font-family: "Quicksand", sans-serif;
+            font-size: 20px;
+            font-weight: bold;
+            height: 50px;
+
+            &:hover{
+                color: #cdb4db;
+            }
+        }
+
+        &__finalizar{
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            background-color: #e9ecef;
+            font-family: "Quicksand", sans-serif;
+            border-radius: 10px;
+            
+            &__sub{
+                height: 60px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color: #cdb4db;
+
+                &--sub{
+                    font-weight: bold;
+                    font-size: 22px;
+                }
+            }
+
+            &--button{
+                color: #cdb4db;
+                background-color: transparent;
+                border: solid 2px #cdb4db;
+                height: 40px;
+                width: 130px;
+                font-weight: bold;
+
+                &:hover{
+                    background-color: #cdb4db;
+                    color: white;
+                }
+            }
+
+            &--icon{
+                font-size: 50px;
+                color: #99d98c;
+            }
+        }
+        
+        &__box{
+                display: flex;
+                justify-content: space-evenly;
+                
+                &__datos{
+                    font-family: "Quicksand", sans-serif;
+                    max-height: 165px;
+                    
+                    & h4 {
+                        font-weight: bolder;
+                        color: #cdb4db;
+                    }
+
+                    & p {
+                        font-weight: bold;
+                    }
+                }
+
+                &__items{
+
+                    &--sub{
+                        color: #cdb4db;
+                    }
+
+                    &__table{
+                        width: 45rem;
+                        border-color: #eaeaea;
+
+                        &--head{
+                            background-color: #e9ecef;
+                            text-align: center;
+                            
+                            tr {
+                                text-align: center;
+                                width: 500px;
+                            }
+                            
+                            th {
+                                height: 55px;
+                                text-transform: uppercase;
+                                font-family: "Quicksand", sans-serif;
+                            }
+                        }
+
+                        &--body tr td{
+                            font-family: "Quicksand", sans-serif;
+                            font-weight: 600;
+                            text-align: center;
+                            padding: 3px;
+                        }
+                    }
+
+                    & h4{
+                        font-family: "Quicksand", sans-serif;
+                        font-weight: bolder;
+                    }
+                }
+            }
+    }
+}
+
+
+// font-family: 'Bebas Neue', cursive;
+//         text-transform: uppercase;

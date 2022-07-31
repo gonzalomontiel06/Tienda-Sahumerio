@@ -33,10 +33,14 @@ export const NavBar = () => {
                         <NavLink activeClassName={'linkSelected'} exact to='/'>home</NavLink>
                         <NavLink activeClassName={'linkSelected'} exact to='/productos'>productos</NavLink>                
                         {currentUser &&
-                                currentUser.uid === adm ? 
+                                currentUser.uid === adm ? <>
                                                             <NavLink activeClassName={'linkSelected'} exact to='/admin'>admin</NavLink>
+                                                            <NavLink activeClassName={'linkSelected'} exact to='/ventas'>ventas</NavLink>
+                                                            </>
                                                         :
-                                                            <NavLink activeClassName={'linkSelected'} exact to='/miCuenta'>mi cuenta</NavLink>
+                                                            currentUser === null 
+                                                                    ?   ''
+                                                                    :   <NavLink activeClassName={'linkSelected'} exact to='/account'>mi cuenta</NavLink>
                         }
 
                     </section>

@@ -1,12 +1,17 @@
 import React, { useContext, useState } from 'react'
 import { Redirect } from 'react-router'
+import { CartContext } from '../../context/CartContext'
 import { LoginContext } from '../../context/LoginContext'
+import Swal from 'sweetalert2'
+import { Link } from 'react-router-dom'
 
 export const SignUp = () => {
 
     const {signUp, userAuth} = useContext(LoginContext)
 
     const [values, setValues] = useState({
+        nombre: '',
+        apellido: '',
         email: '',
         password: '',
         confPassword: '',
@@ -26,13 +31,36 @@ export const SignUp = () => {
         e.preventDefault()
         signUp(email, password, confPassword)
     }
-    
+
+    const {calcularItemCart} = useContext(CartContext)
+
+    const Toast = Swal.mixin({
+        toast: true,
+        position: 'top',
+        showConfirmButton: false,
+        timer: 3500,
+        timerProgressBar: true,
+            didOpen: (toast) => {
+                toast.addEventListener('mouseenter', Swal.stopTimer)
+                toast.addEventListener('mouseleave', Swal.resumeTimer)
+            }
+        })
+
+    const alert = () => {
+        Toast.fire({
+            icon: 'info',
+            title: 'Por favor, registrate para continuar'
+        })
+    }
+
     return(
         
         // SIGN UP VIEW
         <>
         
-        {userAuth && <Redirect exact to='/' />}
+        {userAuth && <Redirect exact to='/cartview' /> }
+
+        {calcularItemCart() !== 0 && alert()}
 
         <div className='container d-flex align-items-center justify-content-center my-5'>
                 <div className='row d-flex align-items-center justify-content-space'>
@@ -75,6 +103,7 @@ export const SignUp = () => {
                             <button type='submit' className='btn btn-primary btnLogin font-weight-bold text-uppercase d-block w-100 mt-4'>
                                 Sign Up
                             </button>
+                            <p className='text-center mt-3'> Ya tenes cuenta? <Link to='/login'>Log in</Link></p>
                         </form>
                     </div>
                 </div>

@@ -16,6 +16,18 @@ export const Login = () => {
 
     const {email, password} = values
 
+    const Toast = Swal.mixin({
+        toast: true,
+        position: 'top',
+        showConfirmButton: false,
+        timer: 4000,
+        timerProgressBar: true,
+            didOpen: (toast) => {
+                toast.addEventListener('mouseenter', Swal.stopTimer)
+                toast.addEventListener('mouseleave', Swal.resumeTimer)
+            }
+        })
+
     const handleChange = (e) => {
         e.preventDefault()
         setValues({
@@ -30,9 +42,9 @@ export const Login = () => {
             .then((res) => console.log(res))
             .catch((err) => console.log(err))
             .finally(() => {
-                Swal.fire({
+                Toast.fire({
                     icon: 'success',
-                    title: 'Bienvenido',
+                    title: 'Bienvenido'
                 })
             })
     }
@@ -41,7 +53,7 @@ export const Login = () => {
         
         // LOGIN VIEW
         <>
-            {userAuth && <Redirect exact to='/' />}
+            {userAuth && <Redirect to='/cartview' />}
         
             <div className='container d-flex align-items-center justify-content-center my-5'>
                 <div className='row d-flex align-items-center justify-content-space'>
@@ -74,7 +86,7 @@ export const Login = () => {
                                 Log in
                             </button>
                         </form>
-                        <small className='text-center mt-3'> No tenes cuenta? <Link to='/signup'>Sign up</Link></small>
+                        <p className='text-center mt-3'> No tenes cuenta? <Link to='/signup'>Sign up</Link></p>
                     </div>
                 </div>
             </div>

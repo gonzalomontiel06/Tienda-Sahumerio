@@ -1,0 +1,72 @@
+.compras{
+
+    &--sub{
+        font-family: "Quicksand", sans-serif;
+        margin-top: 20px;
+    }
+
+    &__box{
+        display: flex;
+        justify-content: center;
+        border-color: #eaeaea;
+        margin-top: 40px;
+
+        &__table{
+            width: 65rem;
+            border-color: #eaeaea;
+
+            &__head{
+                background-color: #f7f7f7;
+                text-align: center;
+                
+                tr {
+                    text-align: center;
+                    width: 500px;
+                }
+                
+                th {
+                    height: 55px;
+                    text-transform: uppercase;
+                    font-family: "Quicksand", sans-serif;
+                }
+            }
+
+            &__body tr td{
+                font-family: "Quicksand", sans-serif;
+                font-weight: 600;
+                text-align: center;
+                padding: 3px;
+            }
+        }
+    }
+}
+
+#pendiente{
+    width: 120px;
+    border: solid 2px #cdb4db;
+    
+    &:hover{
+        color: #cdb4db;
+        background-color: #f7f7f7;
+    }
+}
+
+#finalizado{
+    border: solid 1px #c7f9cc;
+    background-color: #c7f9cc;
+    
+    &:hover{
+        color: #c7f9cc;
+        background-color: #2b9348;
+    }
+}
+
+.detalleIcon{
+    font-size: 30px;
+    color: #cdb4db;
+}
+
+#buttonDetail{
+    border: none;
+    background-color: transparent;
+}

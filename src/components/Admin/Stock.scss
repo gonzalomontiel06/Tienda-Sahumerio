@@ -73,8 +73,13 @@
 }
 
 .deleteItem{
-    height: 23px;
-    width: 23px;
+    border: none;
+    background-color: transparent;
+
+    &--icon{
+        height: 21px;
+        width: 21px;
+    }
     
     &:hover{
         color: #cdb4db;
