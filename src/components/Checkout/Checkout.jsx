@@ -6,12 +6,15 @@ import Swal from 'sweetalert2'
 import { Spinner } from 'react-bootstrap'
 import { LoadingContext } from '../../context/LoadingContext'
 import { generarOrden } from '../../firebase/generarOrden'
+import { validateForm } from '../../helpers/validateForm'
 
 export const Checkout = () => {
 
     const {carrito, calcularTotal, clearCart} = useContext(CartContext)
 
     const {loading, setLoading} = useContext(LoadingContext)
+    
+    const [errors, setErrors] = useState({})
     
     const [values, setValues] = useState({
         nombre: '',
@@ -27,38 +30,46 @@ export const Checkout = () => {
         })
     }
 
+    const handleBlur = (e) => {
+        inputHandleChange(e)
+        setErrors(validateForm(values))
+    }
+
     // FUNCION GENERAR ORDEN DE COMPRA
     
     const handleSubmit = (e) => {
         
         e.preventDefault()
-        
         setLoading(true)
+        setErrors(validateForm(values))
 
-        generarOrden(carrito, values, calcularTotal())
+        if (Object.keys(errors).length === 0) {
             
-            .then((res) => {
-                Swal.fire({
-                    icon: 'success',
-                    title: 'Gracias por su compra',
-                    text: `N° de orden: ${res}`,
-                    willClose: () => {
-                        clearCart()
-                    }
+            generarOrden(carrito, values, calcularTotal())
+                
+                .then((res) => {
+                    Swal.fire({
+                        icon: 'success',
+                        title: 'Gracias por su compra',
+                        text: `N° de orden: ${res}`,
+                        willClose: () => {
+                            clearCart()
+                        }
+                    })
                 })
-            })
 
-            .catch((err) =>{
-                Swal.fire({
-                    icon: 'error',
-                    title: 'ITEM SIN STOCK:',
-                    text: err.map(prod => prod.name)
+                .catch((err) =>{
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'ITEM SIN STOCK:',
+                        text: err.map(prod => prod.name)
+                    })
                 })
-            })
 
-            .finally(() => {
-                setLoading(false)
-            })
+                .finally(() => {
+                    setLoading(false)
+                })
+            }
         }
 
 
@@ -88,16 +99,19 @@ export const Checkout = () => {
                                 value={values.nombre}
                                 name='nombre'
                                 onChange={inputHandleChange}
-                                className='holas'
-                                required/>
+                                onBlur={handleBlur}
+                                required />
+                            {errors.nombre && <p className='error'>{errors.nombre}</p>}
 
                             <label htmlFor="apellido">Apellido:</label>
                             <input 
                                 type="text"
                                 value={values.apellido}
                                 name='apellido'
-                                onChange={inputHandleChange}
+                                onChange={inputHandleChange} 
+                                onBlur={handleBlur}
                                 required/>
+                                {errors.apellido && <p className='error'>{errors.apellido}</p>}
 
                             <label htmlFor="telefono">Telefono:</label>
                             <input 
@@ -105,7 +119,9 @@ export const Checkout = () => {
                                 value={values.telefono}
                                 name='telefono'
                                 onChange={inputHandleChange}
+                                onBlur={handleBlur}
                                 required/>
+                                {errors.telefono && <p className='error'>{errors.telefono}</p>}
 
                             <label htmlFor="mail">Mail:</label>
                             <input 
@@ -113,7 +129,9 @@ export const Checkout = () => {
                                 value={values.correo}
                                 name='correo'
                                 onChange={inputHandleChange}
+                                onBlur={handleBlur}
                                 required/>
+                                {errors.correo && <p className='error'>{errors.correo}</p>}
 
                             <button className='formButton' type='submit'>Finalizar compra</button>
                         </form>

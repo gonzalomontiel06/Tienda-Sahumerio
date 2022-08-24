@@ -7,7 +7,7 @@ import './login.scss'
 
 export const Login = () => {
 
-    const {login, userAuth} = useContext(LoginContext)
+    const {login, currentUser} = useContext(LoginContext)
 
     const [values, setValues] = useState({
         email: '',
@@ -53,7 +53,7 @@ export const Login = () => {
         
         // LOGIN VIEW
         <>
-            {userAuth && <Redirect to='/cartview' />}
+            {currentUser && <Redirect to='/cartview' />}
         
             <div className='container d-flex align-items-center justify-content-center my-5'>
                 <div className='row d-flex align-items-center justify-content-space'>

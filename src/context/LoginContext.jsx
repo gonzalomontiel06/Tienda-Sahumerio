@@ -8,10 +8,6 @@ export const LoginContext = createContext()
 
 export const LoginProvider = ({children}) => {
 
-    const auth = getAuth()
-    const [currentUser, setCurrentUser] = useState(null)
-    const [userAuth, setUserAuth] = useState(false)
-
     const Toast = Swal.mixin({
         toast: true,
         position: 'top-end',
@@ -23,6 +19,11 @@ export const LoginProvider = ({children}) => {
                 toast.addEventListener('mouseleave', Swal.resumeTimer)
             }
         })
+
+    const auth = getAuth()
+    const [currentUser, setCurrentUser] = useState(null)
+    const [userAuth, setUserAuth] = useState(false)
+
 
     const login = (mail, pw) => {
         return auth.signInWithEmailAndPassword(mail, pw)
@@ -54,7 +55,6 @@ export const LoginProvider = ({children}) => {
     useEffect(() => {
         const unsubscribe = auth.onAuthStateChanged((user) =>{
             setCurrentUser(user)
-            console.log(currentUser);
         })
         return () => {
             unsubscribe()

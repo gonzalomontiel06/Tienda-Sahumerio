@@ -12,6 +12,7 @@
     "animate.css": "^4.1.1",
     "bootstrap": "^5.1.1",
     "firebase": "^8.10.0",
+    "mercadopago": "^1.5.14",
     "node-snackbar": "^0.1.16",
     "react": "^17.0.2",
     "react-bootstrap": "^2.0.0-rc.0",

@@ -20,12 +20,19 @@ import { EditStock } from './components/EditStock/EditStock';
 import { AddItem } from './components/AddItem/AddItem';
 import { MyAccount } from './components/MyAccount/MyAccount';
 import { Ventas } from './components/Ventas/Ventas';
+import { getAuth } from './firebase/config'
 
 export const App = () => {
 
+    const auth = getAuth()
+
+    const logout = () => {
+        return auth.signOut()
+    }
+
     return(
         
-        <div className="App">
+        <div className="App" onunload={logout()}>
             <LoginProvider>
                 <LoadingProvider>
                     <CartProvider>

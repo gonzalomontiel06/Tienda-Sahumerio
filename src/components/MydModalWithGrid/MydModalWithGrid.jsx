@@ -10,7 +10,6 @@ import './MydModalWithGrid.scss'
 export function MydModalWithGrid(props) {
 
 
-
     return (
                 <Modal {...props} aria-labelledby="contained-modal-title-vcenter" size='lg' centered dialogClassName="modal-40w" >
                     <Modal.Header closeButton>
@@ -22,7 +21,7 @@ export function MydModalWithGrid(props) {
                         <Container>
                             <Row>
                                 <Col xs={12} md={6}>
-                                    {/* N°: <small id='smallId'>{buy.total}</small> */}
+                                    {/* N°: <small id='smallId'>{total}</small> */}
                                 </Col>
 
                                 <Col xs={6} md={6}>
